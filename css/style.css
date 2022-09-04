@@ -44,9 +44,13 @@ body {
   border: 5px solid black;
 }
 .header .right button:hover {
-  filter: opacity(0.65);
   cursor: pointer;
-  border: 5px solid grey;
+  transition: 600ms;
+  transform: scale(110%)
+}
+.header .right button:active {
+  transition: 100ms;
+  filter: brightness(50%);
 }
 .content {
   background-image: url(https://t3.ftcdn.net/jpg/00/88/98/18/360_F_88981880_YjJManMJ6hJmKr5CZteFJAkEzXIh8mxW.jpg);
