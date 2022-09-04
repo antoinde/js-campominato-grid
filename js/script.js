@@ -17,17 +17,27 @@ console.log("JavaScript is working properly! =) Let's code!");
 // Svolgimento:
 
 //Clicco sul pulsante
-let buttonHTML = document.getElementById("start-button");
-buttonHTML.addEventListener('click', function(){
-    console.log("Pulsante di avvio cliccato!")
+const button = document.getElementById('start-button');
+
+
+button.addEventListener('click', function() {
+    console.log("Pulsante di avvio cliccato!");
 
     //Prendo il contenitore dove mettere gli elementi
-    let containerHTML = document.getElementsByClassName("container");
+    const contentContainer = document.getElementsById('content');
+    contentContainer.innerHTML='';
     
     //Inserisco gli elementi
     for(let i=1; i<=100; i++) {
-        
+
+        //creo l'elemento
+        const element = document.createElement('div');
+        element.className = 'square';
+        contentContainer.append(element);
     }
+
+    
+
 })
 
 
