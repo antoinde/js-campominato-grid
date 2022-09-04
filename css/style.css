@@ -11,8 +11,55 @@
 
 body {
   font-family: sans-serif;
+  background-color: grey;
 }
 
 /* ***********UTILITIES************ */
 
 /* ***********CONTENT************ */
+.container {
+  max-width: 1200px;
+  margin: 70px auto;
+  border: 5px solid black;
+
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color:darkslateblue;
+  border-bottom: 5px solid black;
+}
+.header .left {
+  font-size: 50px;
+  font-weight: 600;
+}
+.header .right {
+  margin: auto 0;
+}
+.header .right button{
+  height: 50px;
+  padding: 10px;
+  font-weight: 900;
+  border: 5px solid black;
+}
+.header .right button:hover {
+  filter: opacity(0.65);
+  cursor: pointer;
+  border: 5px solid grey;
+}
+.content {
+  background-image: url(https://t3.ftcdn.net/jpg/00/88/98/18/360_F_88981880_YjJManMJ6hJmKr5CZteFJAkEzXIh8mxW.jpg);
+  height: 400px;
+}
+.footer {
+  padding: 10px;
+  border-top: 5px solid black;
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.footer .left a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
