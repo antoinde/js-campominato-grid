@@ -18,7 +18,7 @@ body {
 
 /* ***********CONTENT************ */
 .container {
-  max-width: 1200px;
+  max-width: 576px;
   margin: 70px auto;
   border: 5px solid black;
 
@@ -55,6 +55,10 @@ body {
 .content {
   background-image: url(https://t3.ftcdn.net/jpg/00/88/98/18/360_F_88981880_YjJManMJ6hJmKr5CZteFJAkEzXIh8mxW.jpg);
   height: 400px;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 .footer {
   padding: 10px;
@@ -66,4 +70,27 @@ body {
 .footer .left a:hover {
   text-decoration: underline;
   cursor: pointer;
+}
+.square {
+  width: calc(100% / 10 - 9px); /* 9px is pixel correction */
+  height:calc(100% / 10 - 9px); /* 9px is pixel correction */
+  background-color: rgb(189 189 189);
+  border-top: 3px solid rgb(255 255 255);
+  border-left: 3px solid rgb(255 255 255);
+  border-bottom: 3px solid rgb(123 123 123);
+  border-right: 3px solid rgb(123 123 123);
+  cursor: pointer;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.square:hover {
+  filter: brightness(0.6);
+}
+.pari {
+  background-color: #57d3ff;
+}
+.dispari {
+  background-color: #337768;
 }
