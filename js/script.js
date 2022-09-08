@@ -24,7 +24,9 @@ button.addEventListener('click', function() {
     console.log("Pulsante di avvio cliccato!");
 
     //Prendo il contenitore dove mettere gli elementi
-    const contentContainer = document.getElementsById('content');
+    const contentContainer = document.getElementById('content');
+
+    //Svuoto il contenitore (così se riclicco non si aggiungono altri pulsanti)
     contentContainer.innerHTML='';
     
     //Inserisco gli elementi
@@ -32,12 +34,29 @@ button.addEventListener('click', function() {
 
         //creo l'elemento
         const element = document.createElement('div');
+        //gli assegno la classe
         element.className = 'square';
+
+        //al click, se pari -> sfondo AZZURRO        se dispari -> sfondo VERDE
+        element.addEventListener('click', function(){
+            if(i%2==0) // aggiungi classe pari
+            element.classList += ' pari';
+            else // aggiungi classe dispari 
+            element.classList += ' dispari';
+
+            // mostra in console il numero con la cella assegnata
+            console.log(`Cella numero ${i} cliccata!`);
+        })
+
+        //inserisco numero
+        element.innerHTML += i;
         contentContainer.append(element);
     }
 
     
 
 })
+
+
 
 
