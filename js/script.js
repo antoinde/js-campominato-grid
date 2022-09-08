@@ -16,6 +16,9 @@ console.log("JavaScript is working properly! =) Let's code!");
 */
 // Svolgimento:
 
+// Dichiaro array di controllo numeri
+let controllNumberArray=[];
+
 //Clicco sul pulsante
 const button = document.getElementById('start-button');
 
@@ -37,12 +40,26 @@ button.addEventListener('click', function() {
 
         //creo l'elemento
         const element = document.createElement('div');
+
         //gli assegno la classe
         element.className = 'square';
 
+        //inserisco il numero dentro l'elemento (se voglio il BONUS questo lo disattivo)
+        element.innerHTML += i;
+
+        /* 
+            BONUS   
+            Creo una funzione che mi genera un valore random da 1 a 100
+            Lo aggiunge in un array di controllo
+            Se non è inserito dentro l'array di controllo, inserisce il numero
+            Altrimenti ne genera un altro
+            
+            (non completato)
+        */
+        
         //al click, se pari -> sfondo AZZURRO        se dispari -> sfondo VERDE
         element.addEventListener('click', function(){
-            if(i%2==0) // aggiungi classe pari
+            if(element.innerHTML %2==0) // aggiungi classe pari
             element.classList += ' pari';
             else // aggiungi classe dispari 
             element.classList += ' dispari';
@@ -51,15 +68,17 @@ button.addEventListener('click', function() {
             console.log(`Cella numero ${i} cliccata!`);
         })
 
-        //inserisco numero
-        element.innerHTML += i;
+        //pusha l'elemento su html
         contentContainer.append(element);
     }
 
-    
+
+       
 
 })
 
 
 
+
+// ---------------- FUNZIONI --------------------
 
