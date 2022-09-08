@@ -94,3 +94,11 @@ body {
 .dispari {
   background-color: #337768;
 }
+.content2 {
+  background-color: #3e5e6d;
+  height: 400px;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}

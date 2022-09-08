@@ -26,6 +26,9 @@ button.addEventListener('click', function() {
     //Prendo il contenitore dove mettere gli elementi
     const contentContainer = document.getElementById('content');
 
+    //Aggiungo classe sfondo di gioco verde acqua a content
+    contentContainer.className = 'content2';
+
     //Svuoto il contenitore (così se riclicco non si aggiungono altri pulsanti)
     contentContainer.innerHTML='';
     
