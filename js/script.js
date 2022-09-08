@@ -17,7 +17,7 @@ console.log("JavaScript is working properly! =) Let's code!");
 // Svolgimento:
 
 // Dichiaro array di controllo numeri
-let controllNumberArray=[];
+let randomNumbersArray=[];
 
 //Clicco sul pulsante
 const button = document.getElementById('start-button');
@@ -34,8 +34,14 @@ button.addEventListener('click', function() {
 
     //Svuoto il contenitore (così se riclicco non si aggiungono altri pulsanti)
     contentContainer.innerHTML='';
-    
+
+    //Genera numeri casuali univoci da 1 a 100 dentro un array
+    getRandomArrayNumbers(); // SENZA BONUS SI CANCELLA
+
     //Inserisco gli elementi
+
+    let index = 0; // SENZA BONUS SI CANCELLA
+
     for(let i=1; i<=100; i++) {
 
         //creo l'elemento
@@ -44,18 +50,9 @@ button.addEventListener('click', function() {
         //gli assegno la classe
         element.className = 'square';
 
-        //inserisco il numero dentro l'elemento (se voglio il BONUS questo lo disattivo)
-        element.innerHTML += i;
+        //inserisco il numero dentro l'elemento
+        element.innerHTML += randomNumbersArray[index++]; // SENZA BONUS DIVENTA: element.innerHTML += i;
 
-        /* 
-            BONUS   
-            Creo una funzione che mi genera un valore random da 1 a 100
-            Lo aggiunge in un array di controllo
-            Se non è inserito dentro l'array di controllo, inserisce il numero
-            Altrimenti ne genera un altro
-            
-            (non completato)
-        */
         
         //al click, se pari -> sfondo AZZURRO        se dispari -> sfondo VERDE
         element.addEventListener('click', function(){
@@ -82,3 +79,23 @@ button.addEventListener('click', function() {
 
 // ---------------- FUNZIONI --------------------
 
+// PARTE BONUS 
+
+function getRandomArrayNumbers(){
+    
+    let num;
+
+    //finchè non hai inserito 100 numeri
+    while(randomNumbersArray.length < 100) {
+        // genera un numero da 1 a 100
+        num= Math.floor(Math.random() * 100) + 1;
+        // se non è presente inseriscilo
+        if(randomNumbersArray.includes(num) === false) {
+            randomNumbersArray.push(num);
+        }
+    }
+    
+
+    console.log(randomNumbersArray);
+
+}
